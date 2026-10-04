@@ -1,0 +1,383 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17100b">
+<title>DOFUS TAMAGOTCHI</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:Georgia,"Times New Roman",serif;
+    color:#f4dfad;
+    background:
+        radial-gradient(circle at 50% 0%,#5b3515 0,#29170d 38%,#0d0906 100%);
+    min-height:100vh;
+    line-height:1.6;
+}
+
+.wrap{
+    max-width:1050px;
+    margin:auto;
+    padding:24px;
+}
+
+header{
+    text-align:center;
+    padding:55px 15px 35px;
+}
+
+.ornament{
+    color:#c9973e;
+    font-size:24px;
+    letter-spacing:8px;
+}
+
+h1{
+    margin:12px 0 4px;
+    font-size:clamp(38px,8vw,78px);
+    letter-spacing:3px;
+    color:#f8d77c;
+    text-shadow:
+        0 3px 0 #5c3210,
+        0 0 24px rgba(225,170,61,.35);
+}
+
+.subtitle{
+    font-size:clamp(17px,3vw,24px);
+    color:#dfc38b;
+}
+
+.badge{
+    display:inline-block;
+    margin-top:18px;
+    padding:7px 18px;
+    border:1px solid #b98532;
+    border-radius:30px;
+    background:rgba(0,0,0,.3);
+    color:#eacb80;
+    font-size:14px;
+}
+
+.hero{
+    text-align:center;
+    padding:38px 25px 48px;
+    border:1px solid #82591f;
+    border-radius:18px;
+    background:linear-gradient(
+        145deg,
+        rgba(65,37,15,.9),
+        rgba(20,12,8,.94)
+    );
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.45),
+        inset 0 0 35px rgba(220,157,47,.06);
+}
+
+.hero p{
+    max-width:720px;
+    margin:0 auto 28px;
+    color:#d8bd89;
+    font-size:18px;
+}
+
+.download{
+    display:inline-block;
+    padding:15px 34px;
+    border-radius:10px;
+    border:2px solid #e1b654;
+    background:linear-gradient(#d6a744,#8f5d17);
+    color:#1b1007;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    letter-spacing:.8px;
+    box-shadow:
+        0 5px 0 #4f2d0c,
+        0 8px 25px rgba(0,0,0,.4);
+    transition:.18s;
+}
+
+.download:hover{
+    transform:translateY(-2px);
+    filter:brightness(1.08);
+}
+
+.small{
+    display:block;
+    margin-top:13px;
+    color:#9e855f;
+    font-size:13px;
+}
+
+section{
+    margin-top:35px;
+}
+
+.section-title{
+    text-align:center;
+    color:#f1cf78;
+    font-size:30px;
+    margin-bottom:20px;
+    text-shadow:0 2px 0 #3b210d;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.card{
+    padding:25px 20px;
+    border:1px solid #674518;
+    border-radius:13px;
+    background:rgba(28,17,10,.9);
+    text-align:center;
+}
+
+.icon{
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.card h3{
+    color:#e8c46d;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#bca477;
+    font-size:15px;
+}
+
+.steps{
+    display:grid;
+    gap:12px;
+    max-width:760px;
+    margin:auto;
+}
+
+.step{
+    display:flex;
+    gap:16px;
+    align-items:center;
+    padding:16px 18px;
+    background:rgba(25,15,9,.88);
+    border:1px solid #513613;
+    border-radius:10px;
+}
+
+.num{
+    min-width:34px;
+    height:34px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:#a87320;
+    color:#160d06;
+    font-weight:bold;
+}
+
+.step span:last-child{
+    color:#cdb487;
+}
+
+.final{
+    text-align:center;
+    padding:45px 10px;
+}
+
+footer{
+    border-top:1px solid #493016;
+    margin-top:15px;
+    padding:22px;
+    text-align:center;
+    color:#786343;
+    font-size:13px;
+}
+
+@media(max-width:700px){
+    .wrap{
+        padding:14px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    header{
+        padding-top:30px;
+    }
+
+    .hero{
+        padding:28px 17px 35px;
+    }
+
+    .download{
+        width:100%;
+        max-width:360px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<header>
+    <div class="ornament">✦ ✦ ✦</div>
+
+    <h1>DOFUS TAMAGOTCHI</h1>
+
+    <div class="subtitle">
+        Tu pequeña aventura DOFUS, siempre contigo
+    </div>
+
+    <div class="badge">
+        ANDROID · VERSIÓN 1.0.0
+    </div>
+</header>
+
+<main>
+
+<div class="hero">
+
+    <p>
+        Cuida de tu personaje, mantén sus necesidades bajo control
+        y disfruta de una pequeña experiencia inspirada en el universo DOFUS.
+    </p>
+
+    <a
+        class="download"
+        href="https://github.com/proyectosappfichaje/dofus-tamagotchi/releases/download/v1.0.0/dofustamagotchi.V2.apk"
+        download>
+        ⚔ DESCARGAR APK ⚔
+    </a>
+
+    <span class="small">
+        Android · Archivo APK · Versión 1.0.0
+    </span>
+
+</div>
+
+<section>
+
+<h2 class="section-title">
+    Características
+</h2>
+
+<div class="grid">
+
+<article class="card">
+
+<div class="icon">❤️</div>
+
+<h3>Cuídalo</h3>
+
+<p>
+Controla la salud, energía y necesidades de tu personaje.
+</p>
+
+</article>
+
+<article class="card">
+
+<div class="icon">🎮</div>
+
+<h3>Minijuegos</h3>
+
+<p>
+Diviértete con diferentes actividades para mantenerlo entretenido.
+</p>
+
+</article>
+
+<article class="card">
+
+<div class="icon">🌙</div>
+
+<h3>Descansa</h3>
+
+<p>
+Haz que tu personaje duerma y recupere su energía.
+</p>
+
+</article>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+    Cómo instalarlo
+</h2>
+
+<div class="steps">
+
+<div class="step">
+<span class="num">1</span>
+<span>
+Pulsa el botón <strong>DESCARGAR APK</strong>.
+</span>
+</div>
+
+<div class="step">
+<span class="num">2</span>
+<span>
+Abre el archivo APK descargado en tu dispositivo Android.
+</span>
+</div>
+
+<div class="step">
+<span class="num">3</span>
+<span>
+Autoriza la instalación si Android te lo solicita.
+</span>
+</div>
+
+<div class="step">
+<span class="num">4</span>
+<span>
+Instala DOFUS TAMAGOTCHI y empieza a jugar.
+</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="final">
+
+<h2 class="section-title">
+    ¿Preparado para la aventura?
+</h2>
+
+<a
+    class="download"
+    href="https://github.com/proyectosappfichaje/dofus-tamagotchi/releases/download/v1.0.0/dofustamagotchi.V2.apk"
+    download>
+    DESCARGAR DOFUS TAMAGOTCHI
+</a>
+
+</section>
+
+</main>
+
+<footer>
+
+DOFUS TAMAGOTCHI · Versión 1.0.0
+<br>
+Proyecto independiente inspirado en el universo DOFUS.
+
+</footer>
+
+</div>
+
+</body>
+</html>
